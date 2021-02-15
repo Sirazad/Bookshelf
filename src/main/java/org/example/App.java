@@ -4,8 +4,6 @@ import com.codecool.sirazad.Bookshelf;
 import com.codecool.sirazad.HardcoverBook;
 import com.codecool.sirazad.PaperbackBook;
 
-import java.util.Arrays;
-
 public class App {
 
     public static void main(String[] args ) {
@@ -20,7 +18,7 @@ public class App {
         System.out.println("\nLightest author's book");
         System.out.println(favourites.getLightestAuthor().toString());
 
+        System.out.println("\n Author of the longest book is: "+favourites.getAuthorOfMostWrittenPages());
     }
-
 
 }

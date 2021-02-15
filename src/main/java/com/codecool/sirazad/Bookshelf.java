@@ -2,7 +2,6 @@ package com.codecool.sirazad;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 
 public class Bookshelf {
@@ -24,8 +23,14 @@ public class Bookshelf {
     }
 
 
-    private String getAuthorOfMostWrittenPages() {
-        return "";
+    public String getAuthorOfMostWrittenPages() {
+        return storedBooks.stream()
+                .reduce((book1, book2)
+                -> book1.getNumberOfPages() > book2.getNumberOfPages()
+                ? book1: book2)
+                .stream()
+                .findAny().get()
+                .getAuthor();
     }
 
 }

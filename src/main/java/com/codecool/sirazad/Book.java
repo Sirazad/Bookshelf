@@ -9,13 +9,17 @@ public class Book {
     private int releaseYear;
     private int weightInGram;
     public static final int PAGE_WEIGHT = 10;
+    private Genre genre;
+    private static int piecesAvailable = 0;
 
-    Book(String title, String author, int releaseYear, int numberOfPages, int weightInGram) {
+    Book(String title, String author, int releaseYear, int numberOfPages, int weightInGram, Genre genre) {
         this.title = title;
         this.author = author;
         this.numberOfPages = numberOfPages;
         this.releaseYear = releaseYear;
         this.weightInGram = weightInGram;
+        this.genre = genre;
+        ++piecesAvailable;
     }
 
 
