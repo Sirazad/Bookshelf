@@ -1,7 +1,10 @@
 package com.codecool.sirazad.model.bookentity;
 
-import java.util.StringJoiner;
+import lombok.Data;
+import lombok.Getter;
 
+import java.util.StringJoiner;
+@Data
 public class Book {
     private String title;
     private String author;
@@ -9,12 +12,12 @@ public class Book {
     private int releaseYear;
     private int weightInGram;
     public static final int PAGE_WEIGHT = 10;
-    private Genre genre;
+    public Genre genre;
     //TODO refactor
     private int piecesAvailable = 0;
 
 
-    Book(String title, String author, int releaseYear, int numberOfPages, int weightInGram, Genre genre) {
+    public Book(String title, String author, int releaseYear, int numberOfPages, int weightInGram, Genre genre) {
         this.title = title;
         this.author = author;
         this.numberOfPages = numberOfPages;
@@ -23,7 +26,6 @@ public class Book {
         this.genre = genre;
 
     }
-
 
     public String getBookinfo() {
         return author+": "+title+"("+releaseYear+")";

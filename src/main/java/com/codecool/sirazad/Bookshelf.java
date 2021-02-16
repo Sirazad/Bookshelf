@@ -1,5 +1,7 @@
 package com.codecool.sirazad;
 
+import com.codecool.sirazad.model.bookentity.Book;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
