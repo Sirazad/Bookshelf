@@ -6,6 +6,8 @@ import java.util.stream.Collectors;
 
 public class Bookshelf {
     List<Book> storedBooks = new ArrayList<>();
+    private static int piecesAvailable = 0;
+
 
 
     public void addBook(Book newBook) {

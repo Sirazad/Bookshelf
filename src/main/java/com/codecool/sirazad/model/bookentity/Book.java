@@ -1,4 +1,4 @@
-package com.codecool.sirazad;
+package com.codecool.sirazad.model.bookentity;
 
 import java.util.StringJoiner;
 
@@ -10,7 +10,9 @@ public class Book {
     private int weightInGram;
     public static final int PAGE_WEIGHT = 10;
     private Genre genre;
-    private static int piecesAvailable = 0;
+    //TODO refactor
+    private int piecesAvailable = 0;
+
 
     Book(String title, String author, int releaseYear, int numberOfPages, int weightInGram, Genre genre) {
         this.title = title;
@@ -19,7 +21,7 @@ public class Book {
         this.releaseYear = releaseYear;
         this.weightInGram = weightInGram;
         this.genre = genre;
-        ++piecesAvailable;
+
     }
 
 
