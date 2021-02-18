@@ -26,8 +26,9 @@ public class Opinion {
         return opinion;
     }
 
-    public void setOpinion(String opinion) {
+    public Opinion setOpinion(String opinion) {
         this.opinion = opinion;
+        return this;
     }
 
 }

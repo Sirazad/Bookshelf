@@ -13,6 +13,7 @@ import java.util.Optional;
 public class Customer {
     private final String NAME;
     private final Date BIRTH;
+    private long customerId;
     private String email;
     private List<Book> wishList;
     private List<Rating> bookRatings;
@@ -34,5 +35,10 @@ public class Customer {
 
     public void addOpinion(Opinion opinion) {
         bookOpinions.add(opinion);
+    }
+
+
+    public void updateOpinion(Object setOpinon) {
+        //...
     }
 }

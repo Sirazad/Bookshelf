@@ -6,6 +6,7 @@ import lombok.Getter;
 import java.util.StringJoiner;
 @Data
 public class Book {
+    public long bookId;
     private String title;
     private String author;
     private int numberOfPages;
